@@ -3,7 +3,7 @@ import edu.duke.*;
 public class TestCaesarEncrypt {
     private String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    public int[] countLetters(String words) {
+    private int[] countLetters(String words) {
         int[] letterQtd = new int[26];
         String wordUpeer = words.toUpperCase();
 
@@ -20,7 +20,7 @@ public class TestCaesarEncrypt {
         return letterQtd;
     }
 
-    public char maxIndex(int[] qtdLetters) {
+    private char maxIndex(int[] qtdLetters) {
         int positionLetter = -1;
         Character letter = null;
 

@@ -1,7 +1,7 @@
 public class TestCaesarEncryptTwo {
     private String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    public String halfOfString(String message, int start){
+    private String halfOfString(String message, int start){
         String result = "";
 
         for(int i=0; i<message.length(); i++){
@@ -18,7 +18,7 @@ public class TestCaesarEncryptTwo {
         return result;
     }
 
-    public int[] countLetters(String words) {
+    private int[] countLetters(String words) {
         int[] letterQtd = new int[26];
         String wordUpeer = words.toUpperCase();
 
@@ -35,7 +35,7 @@ public class TestCaesarEncryptTwo {
         return letterQtd;
     }
 
-    public char maxIndex(int[] qtdLetters) {
+    private char maxIndex(int[] qtdLetters) {
         int positionLetter = -1;
         Character letter = null;
 
@@ -86,6 +86,7 @@ public class TestCaesarEncryptTwo {
                 int[] arrayLeters = countLetters(currentWord);
                 char comunLetter = maxIndex(arrayLeters);
                 if(comunLetter == 'E'){
+                    System.out.printf("%n%d - %d -- %s",key1, key2, currentWord);
                     if(arrayLeters[4] > maxLetter){
                         finalWord = currentWord;
                         key1 = i;
